@@ -35,8 +35,9 @@
 .nlv .btn-secondary:hover{border-color:var(--cream)}
 .nlv .btn:focus-visible,.nlv select:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
 .nlv .cta{margin-top:24px}
+.nlv .remind-link{margin-top:18px}
 .nlv .fine{font-size:13px;color:var(--muted);margin-top:10px;text-align:center}
-.nlv .steps{margin-top:28px;border-top:1px solid var(--border)}
+.nlv .steps{margin-top:24px;border-top:1px solid var(--border)}
 .nlv .steps ol{list-style:none;margin:0;padding:0}
 .nlv .steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--border)}
 .nlv .steps .n{font:600 13px/1.6 var(--label);letter-spacing:.12em;color:var(--muted);padding-top:1px}
@@ -77,17 +78,19 @@
     <h1 id="h1">Vote NO LMTS today. <em id="h1-last">Then again tomorrow.</em></h1>
     <p class="lede" id="lede">We're nominated in <b>Marketing / Creative Agency</b>. You can vote once a day until <b>Dec 11 at 5 PM CT</b>.</p>
     <p class="label status" id="status"><span id="days">24</span> days left · 3 taps</p>
-    <div class="cta" id="cta">
-      <a class="btn btn-primary" id="vote-now" href="https://www.votebestnwa.com" target="_blank" rel="noopener">Vote now <span aria-hidden="true">→</span></a>
-      <p class="fine">Opens votebestnwa.com in a new tab.</p>
-    </div>
     <div class="steps" id="steps">
-      <p class="label">Then on the site</p>
+      <p class="label">3 taps to vote</p>
       <ol>
         <li><span class="n">01</span><span class="t">Tap Services</span></li>
         <li><span class="n">02</span><span class="t">Tap Marketing / Creative Agency</span></li>
-        <li><span class="n">03</span><span class="t">Pick NO LMTS Marketing<small>Our listed name, 11th of 13. Follow the prompts to finish.</small></span></li>
+        <li><span class="n">03</span><span class="t">Tap NO LMTS Marketing<small>Our listed name, 11th of 13. Follow the prompts to finish.</small></span></li>
       </ol>
+    </div>
+    <div class="cta" id="cta">
+      <a class="btn btn-primary" id="vote-now" href="https://www.votebestnwa.com" target="_blank" rel="noopener">Vote now <span aria-hidden="true">→</span></a>
+      <p class="fine">Opens votebestnwa.com in a new tab.</p>
+      <a class="btn btn-secondary remind-link" href="#remind">Add the daily reminder <span aria-hidden="true">↓</span></a>
+      <p class="fine">One vote a day adds up. The reminder does the remembering.</p>
     </div>
   </section>
 
