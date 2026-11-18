@@ -1,0 +1,153 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Oswald:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+<style>
+.nlv{
+  --ink:#0d0d0c; --panel:#171715; --line:#2c2b27; --fg:#f3f1ea; --muted:#a6a39a;
+  --gold:#e8bf2b; --gold-ink:#1a1405;
+  --display:"DM Serif Display",Georgia,serif;
+  --label:"Oswald","Arial Narrow",Impact,sans-serif;
+  --body:"Inter",system-ui,-apple-system,sans-serif;
+  color-scheme:dark;
+}
+.nlv, .nlv *{box-sizing:border-box}
+.nlv{background:var(--ink);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.nlv .wrap{max-width:560px;margin:0 auto;padding-block:40px 56px;display:flex;flex-direction:column;gap:40px}
+.nlv .eyebrow{font-family:var(--label);text-transform:uppercase;letter-spacing:.14em;font-size:13px;color:var(--gold)}
+.nlv h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,11vw,60px);line-height:1;margin:10px 0 14px;text-wrap:balance}
+.nlv h1 em{font-style:normal;color:var(--gold)}
+.nlv h2{font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:20px;margin:0 0 14px}
+.nlv p{margin:0}
+.nlv .lede{color:var(--muted);font-size:17px}
+.nlv .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:18px 20px;border-radius:14px;
+  font-family:var(--label);font-weight:600;font-size:20px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer}
+.nlv .btn-gold{background:var(--gold);color:var(--gold-ink)}
+.nlv .btn-gold:hover{filter:brightness(1.07)}
+.nlv .btn-ghost{background:transparent;color:var(--fg);border:1.5px solid var(--line);font-size:16px;padding:14px}
+.nlv .btn-ghost:hover{border-color:var(--gold)}
+.nlv .btn:focus-visible,.nlv select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.nlv .stats{display:flex;gap:10px;margin-top:18px}
+.nlv .stat{flex:1;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.nlv .stat b{display:block;font-family:var(--display);font-weight:400;font-size:32px;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.nlv .stat span{font-size:13px;color:var(--muted)}
+.nlv ol.taps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.nlv ol.taps li{display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
+.nlv ol.taps .n{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-family:var(--label);font-weight:600}
+.nlv ol.taps .t{font-weight:600}
+.nlv ol.taps .t q{quotes:none;color:var(--gold)}
+.nlv ol.taps small{display:block;color:var(--muted);font-weight:400;font-size:14px}
+.nlv .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.nlv .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.nlv label{font-size:15px;color:var(--muted)}
+.nlv select{background:var(--ink);color:var(--fg);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font:600 16px var(--body)}
+.nlv .fine{font-size:13px;color:var(--muted)}
+.nlv .about p+p{margin-top:12px}
+.nlv .about ul{margin:12px 0 0;padding-left:20px;color:var(--fg)}
+.nlv .about li{margin:4px 0}
+.nlv footer{border-top:1px solid var(--line);padding-top:20px;font-size:13px;color:var(--muted)}
+.nlv footer a{color:var(--muted)}
+.nlv .sig{font-family:var(--display);font-size:22px;color:var(--fg)}
+@media (prefers-reduced-motion:no-preference){.nlv .btn{transition:filter .15s,border-color .15s}
+}
+.nlv{max-width:none!important;margin:0!important;border-radius:0}
+.nlv a.btn{color:inherit}
+.nlv a.btn-gold{color:var(--gold-ink)!important}
+.nlv h1,.nlv h2{color:inherit}
+</style>
+<div class="nlv">
+<main class="wrap">
+  <header>
+    <div class="eyebrow">Best of Northwest Arkansas 2026 · Nominee</div>
+    <h1>Vote <em>NO LMTS</em> for Best Marketing Agency in NWA</h1>
+    <p class="lede">You can vote once a day until <strong>Dec 11 at 5 PM</strong>. It takes about 20 seconds, and every day counts.</p>
+    <div class="stats" aria-live="polite">
+      <div class="stat"><b id="days">–</b><span>days of voting left</span></div>
+      <div class="stat"><b id="votes">–</b><span>votes you can still cast</span></div>
+    </div>
+  </header>
+
+  <section>
+    <a class="btn btn-gold" href="https://www.votebestnwa.com" target="_blank" rel="noopener" id="vote-now">Vote now →</a>
+    <p class="fine" style="margin-top:10px;text-align:center">Opens votebestnwa.com. Then do these 3 taps:</p>
+    <ol class="taps" style="margin-top:14px">
+      <li><span class="n">1</span><span class="t">Tap <q>Services</q><small>It's in the grid of categories</small></span></li>
+      <li><span class="n">2</span><span class="t">Tap <q>Marketing / Creative Agency</q></span></li>
+      <li><span class="n">3</span><span class="t">Pick <q>NO LMTS Marketing</q><small>About 11th on the list. Follow the prompts to finish.</small></span></li>
+    </ol>
+  </section>
+
+  <section class="card" aria-labelledby="remind-h">
+    <h2 id="remind-h">Get a daily reminder</h2>
+    <p>One tap adds a short event to your calendar every morning with the link and these steps. It stops on its own when voting closes.</p>
+    <div class="row">
+      <label for="time">Remind me at</label>
+      <select id="time">
+        <option value="7">7:00 AM</option>
+        <option value="8" selected>8:00 AM</option>
+        <option value="9">9:00 AM</option>
+        <option value="12">12:00 PM</option>
+        <option value="17">5:00 PM</option>
+        <option value="20">8:00 PM</option>
+      </select>
+    </div>
+    <a class="btn btn-gold" id="gcal" href="https://calendar.google.com" target="_blank" rel="noopener">Add to Google Calendar</a>
+    <p class="fine">Works on any phone with a Google account. On an iPhone without Google Calendar, set a daily alarm or reminder for the same time and keep this page bookmarked. Morning works best: you vote before the day gets busy.</p>
+  </section>
+
+  <section class="about" aria-labelledby="about-h">
+    <h2 id="about-h">Who you're voting for</h2>
+    <p>NO LMTS is a Northwest Arkansas marketing company built for local service businesses: roofers, contractors, outdoor and home-service crews. We run the paid media, catch the leads, and get real appointments on the owner's calendar so they can stay on the job.</p>
+    <ul>
+      <li>Paid media that brings in local customers</li>
+      <li>Every lead followed up fast, day or night</li>
+      <li>Booked appointments, not just clicks</li>
+    </ul>
+    <p>We're a small local team, and a win here means a lot to us. Thank you for voting.</p>
+  </section>
+
+  <footer>
+    <div class="sig">NO LMTS</div>
+    <p>Follow <a href="https://www.instagram.com/nolmts_marketing/" target="_blank" rel="noopener">@nolmts_marketing</a> · Voting powered by Celebrate Local Business. Results in March 2027.</p>
+  </footer>
+</main>
+</div>
+<script>
+(function(){
+  var CLOSE = Date.UTC(2026,11,11,23,0,0); // Dec 11 2026, 5:00 PM Central
+  var now = Date.now();
+  var msLeft = Math.max(0, CLOSE - now);
+  var days = Math.ceil(msLeft / 864e5);
+  document.getElementById('days').textContent = days;
+  document.getElementById('votes').textContent = days;
+  if (msLeft === 0) {
+    document.querySelector('.lede').textContent = 'Voting has closed. Thank you for every vote. Winners are announced in March 2027.';
+  }
+
+  var tz = 'America/Chicago';
+  try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || tz; } catch(e){}
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function stamp(d,h,m){ return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'T'+pad(h)+pad(m)+'00'; }
+
+  var details = 'About 20 seconds, once a day:\n' +
+    '1. Open https://www.votebestnwa.com\n' +
+    '2. Tap Services\n' +
+    '3. Tap Marketing / Creative Agency\n' +
+    '4. Pick NO LMTS Marketing\n\n' +
+    'Voting closes Dec 11 at 5 PM. Thank you!';
+
+  function build(){
+    var hour = parseInt(document.getElementById('time').value,10);
+    var start = new Date();
+    if (start.getHours() >= hour) start.setDate(start.getDate()+1);
+    var url = 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+      '&text=' + encodeURIComponent('Vote NO LMTS – Best of NWA') +
+      '&dates=' + stamp(start,hour,0) + '/' + stamp(start,hour,5) +
+      '&ctz=' + encodeURIComponent(tz) +
+      '&recur=' + encodeURIComponent('RRULE:FREQ=DAILY;UNTIL=20261211T230000Z') +
+      '&location=' + encodeURIComponent('https://www.votebestnwa.com') +
+      '&details=' + encodeURIComponent(details);
+    document.getElementById('gcal').href = url;
+  }
+  document.getElementById('time').addEventListener('change', build);
+  build();
+})();
+</script>
