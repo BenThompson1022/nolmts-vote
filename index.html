@@ -108,10 +108,10 @@ footer p+p{margin-top:8px}
       </select>
     </div>
       <div class="stack">
-      <a class="btn btn-primary" id="gcal" href="https://calendar.google.com" target="_blank" rel="noopener">Add to Google Calendar</a>
-      <a class="btn btn-secondary" id="ics" href="vote-reminder.ics" download="vote-reminder.ics">iPhone / Outlook calendar</a>
-    </div>
-      <p class="fine">iPhone / Outlook reminder is daily at 8 AM CT.</p>
+        <a class="btn btn-primary" id="ics" href="vote-reminder-8.ics">Add to my phone calendar</a>
+        <a class="btn btn-secondary" id="gcal" href="https://calendar.google.com" target="_blank" rel="noopener">Google Calendar on a computer</a>
+      </div>
+      <p class="fine">Repeats every day at the time you pick until voting closes Dec 11. Times are Central.</p>
     </div>
 
     <div class="stepblock" id="cta">
@@ -187,6 +187,7 @@ footer p+p{margin-top:8px}
       '&details=' + encodeURIComponent(details);
   }
   document.getElementById('time').addEventListener('change', build);
+  document.getElementById('time').addEventListener('change', function(){ document.getElementById('ics').href='vote-reminder-'+this.value+'.ics'; });
   build();
 })();
 </script>

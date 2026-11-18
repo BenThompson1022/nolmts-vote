@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NO LMTS//Vote Reminder//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:nolmts-bestofnwa-2026-7@nolmts.ai
+DTSTAMP:20261118T120000Z
+DTSTART:20261119T130000Z
+DTEND:20261119T130500Z
+RRULE:FREQ=DAILY;UNTIL=20261211T230000Z
+SUMMARY:Vote NO LMTS - Best of NWA
+URL:https://www.votebestnwa.com
+LOCATION:https://www.votebestnwa.com
+DESCRIPTION:VOTE HERE: https://www.votebestnwa.com\n\n3 taps\, once a day:\n1. Open the link above\n2. Tap Services\n3. Tap Marketing / Creative Agency\n4. Pick NO LMTS Marketing\n\nVoting closes Dec 11 at 5 PM CT. Thank you!
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Vote NO LMTS - Best of NWA
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
