@@ -70,6 +70,12 @@ footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--border);font-
 footer p+p{margin-top:8px}
 @media (min-width:900px){.wrap{padding-top:40px}.hero{padding-top:56px}}
 @media (prefers-reduced-motion:no-preference){.btn{transition:background-color .15s,border-color .15s}html{scroll-behavior:smooth}}
+.howto{margin-top:16px;font-size:17px}
+.stepblock{margin-top:32px;padding-top:24px;border-top:1px solid var(--border)}
+.stepblock h2{margin-top:10px}
+.stepblock .body{margin-top:10px}
+.stepblock .steps{margin-top:18px}
+.btn.vote{margin-top:20px}
 </style>
 </head>
 <body>
@@ -83,26 +89,13 @@ footer p+p{margin-top:8px}
     <h1 id="h1">Vote NO LMTS today. <em id="h1-last">Then again tomorrow.</em></h1>
     <p class="lede" id="lede">We're nominated in <b>Marketing / Creative Agency</b>. You can vote once a day until <b>Dec 11 at 5 PM CT</b>.</p>
     <p class="label status" id="status"><span id="days">24</span> days left · 3 taps</p>
-    <div class="steps" id="steps">
-      <p class="label">3 taps to vote</p>
-      <ol>
-        <li><span class="n">01</span><span class="t">Tap Services</span></li>
-        <li><span class="n">02</span><span class="t">Tap Marketing / Creative Agency</span></li>
-        <li><span class="n">03</span><span class="t">Tap NO LMTS Marketing<small>Our listed name, 11th of 13. Follow the prompts to finish.</small></span></li>
-      </ol>
-    </div>
-    <div class="cta" id="cta">
-      <a class="btn btn-primary" id="vote-now" href="https://www.votebestnwa.com" target="_blank" rel="noopener">Vote now <span aria-hidden="true">→</span></a>
-      <p class="fine">Opens votebestnwa.com in a new tab.</p>
-      <a class="btn btn-secondary remind-link" href="#remind">Add the daily reminder <span aria-hidden="true">↓</span></a>
-      <p class="fine">One vote a day adds up. The reminder does the remembering.</p>
-    </div>
-  </section>
+    <p class="howto">Here's how it works: add the daily reminder once, then vote. Every day after, the reminder brings you right back to vote again.</p>
 
-  <section class="block" id="remind" aria-labelledby="remind-h">
-    <h2 id="remind-h">Voted? <em>Make tomorrow automatic.</em></h2>
-    <p class="body">Add a daily reminder with the link and the 3 taps. It ends on its own when voting closes.</p>
-    <div class="row">
+    <div class="stepblock" id="remind" aria-labelledby="remind-h">
+      <p class="label">Step 1 · Do this once</p>
+      <h2 id="remind-h">Add the daily <em>reminder.</em></h2>
+      <p class="body">Puts a short event on your calendar every day with the vote link inside. It stops on its own after Dec 11.</p>
+      <div class="row">
       <label class="label" for="time">Remind me at</label>
       <select id="time">
         <option value="7">7:00 AM</option>
@@ -113,11 +106,27 @@ footer p+p{margin-top:8px}
         <option value="20">8:00 PM</option>
       </select>
     </div>
-    <div class="stack">
+      <div class="stack">
       <a class="btn btn-primary" id="gcal" href="https://calendar.google.com" target="_blank" rel="noopener">Add to Google Calendar</a>
       <a class="btn btn-secondary" id="ics" href="vote-reminder.ics" download="vote-reminder.ics">iPhone / Outlook calendar</a>
     </div>
-    <p class="fine">iPhone / Outlook reminder is daily at 8 AM CT.</p>
+      <p class="fine">iPhone / Outlook reminder is daily at 8 AM CT.</p>
+    </div>
+
+    <div class="stepblock" id="cta">
+      <p class="label">Step 2 · Do this every day</p>
+      <h2>Vote <em>now.</em></h2>
+      <div class="steps" id="steps">
+        <p class="label">3 taps on the site</p>
+        <ol>
+        <li><span class="n">01</span><span class="t">Tap Services</span></li>
+        <li><span class="n">02</span><span class="t">Tap Marketing / Creative Agency</span></li>
+        <li><span class="n">03</span><span class="t">Tap NO LMTS Marketing<small>Our listed name, 11th of 13. Follow the prompts to finish.</small></span></li>
+      </ol>
+      </div>
+      <a class="btn btn-primary vote" id="vote-now" href="https://www.votebestnwa.com" target="_blank" rel="noopener">Vote now <span aria-hidden="true">→</span></a>
+      <p class="fine">Opens votebestnwa.com in a new tab. Come back here anytime.</p>
+    </div>
   </section>
 
   <section class="block" aria-labelledby="about-h">
@@ -177,9 +186,7 @@ footer p+p{margin-top:8px}
       '&details=' + encodeURIComponent(details);
   }
   document.getElementById('time').addEventListener('change', build);
-  build();
-  document.getElementById('vote-now').addEventListener('click', function(){
-    setTimeout(function(){ document.getElementById('remind').scrollIntoView({block:'start'}); }, 600);
+  build(); }, 600);
   });
 })();
 </script>
