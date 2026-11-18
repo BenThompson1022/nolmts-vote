@@ -95,12 +95,23 @@ footer p+p{margin-top:8px}
     <div class="stepblock" id="remind" aria-labelledby="remind-h">
       <p class="label">Step 1 · Do this once</p>
       <h2 id="remind-h">Add the daily <em>reminder.</em></h2>
-      <p class="body">Puts a 9 AM reminder on your calendar every day with the vote link inside. It stops on its own after Dec 11.</p>
+      <p class="body">Puts a reminder on your calendar every day with the vote link inside. It stops on its own after Dec 11.</p>
+      <div class="row">
+        <label class="label" for="time">Remind me at</label>
+        <select id="time">
+          <option value="7">7:00 AM</option>
+          <option value="8">8:00 AM</option>
+          <option value="9" selected>9:00 AM (best)</option>
+          <option value="12">12:00 PM</option>
+          <option value="17">5:00 PM</option>
+          <option value="20">8:00 PM</option>
+        </select>
+      </div>
       <div class="stack">
         <a class="btn btn-primary" id="ics" href="vote-reminder-9.ics">Add to my phone calendar</a>
         <a class="btn btn-secondary" id="gcal" href="https://calendar.google.com" target="_blank" rel="noopener">Google Calendar on a computer</a>
       </div>
-      <p class="fine">Repeats every day at 9 AM until voting closes Dec 11.</p>
+      <p class="fine">Pick a time, then add it. Repeats every day at that time until voting closes Dec 11. Times are Central.</p>
     </div>
 
     <div class="stepblock" id="cta">
@@ -164,7 +175,7 @@ footer p+p{margin-top:8px}
     '4. Pick NO LMTS Marketing\n\n' +
     'Voting closes Dec 11 at 5 PM CT. Thank you!';
   function build(){
-    var hour = 9;
+    var hour = parseInt(document.getElementById('time').value,10) || 9;
     var start = new Date();
     if (start.getHours() >= hour) start.setDate(start.getDate()+1);
     document.getElementById('gcal').href = 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
@@ -176,6 +187,7 @@ footer p+p{margin-top:8px}
       '&details=' + encodeURIComponent(details);
   }
   build();
+  document.getElementById('time').addEventListener('change', function(){ build(); document.getElementById('ics').href='vote-reminder-'+this.value+'.ics'; });
 })();
 </script>
 </body>
