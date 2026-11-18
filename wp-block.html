@@ -156,8 +156,9 @@
   try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || tz; } catch(e){}
   function pad(n){ return String(n).padStart(2,'0'); }
   function stamp(d,h,m){ return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'T'+pad(h)+pad(m)+'00'; }
-  var details = '3 taps, once a day:\n' +
-    '1. Open https://www.votebestnwa.com\n' +
+  var details = 'VOTE HERE: https://www.votebestnwa.com\n\n' +
+    '3 taps, once a day:\n' +
+    '1. Open the link above\n' +
     '2. Tap Services\n' +
     '3. Tap Marketing / Creative Agency\n' +
     '4. Pick NO LMTS Marketing\n\n' +
