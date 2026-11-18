@@ -11,7 +11,7 @@ DTEND:20261119T140500Z
 RRULE:FREQ=DAILY;UNTIL=20261211T230000Z
 SUMMARY:Vote NO LMTS - Best of NWA
 URL:https://www.votebestnwa.com
-DESCRIPTION:20 seconds\, once a day:\n1. Open votebestnwa.com\n2. Tap Services\n3. Tap Marketing / Creative Agency\n4. Pick NO LMTS Marketing\n\nVoting closes Dec 11 at 5 PM. Thank you!
+DESCRIPTION:3 taps\, once a day:\n1. Open votebestnwa.com\n2. Tap Services\n3. Tap Marketing / Creative Agency\n4. Pick NO LMTS Marketing\n\nVoting closes Dec 11 at 5 PM CT. Thank you!
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Vote NO LMTS - Best of NWA
